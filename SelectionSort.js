@@ -23,11 +23,10 @@ class Solution
    //code here
    arr.forEach((item, i) => {
 		let minIdx = this.select(arr, i)
-		if( i !== minIdx){
-			arr[i] +=  arr[minIdx];
-			arr[minIdx] = arr[i] - arr[minIdx];
-			arr[i] = arr[i] - arr[minIdx];
-		}
+		if( i === minIdx) return;
+		arr[i] +=  arr[minIdx];
+		arr[minIdx] = arr[i] - arr[minIdx];
+		arr[i] = arr[i] - arr[minIdx];
 	})
 	return arr
 	}
