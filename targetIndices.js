@@ -16,3 +16,14 @@ var targetIndices = function(nums, target) {
         answer.push(sum + i)
     return answer
 };
+
+var targetIndices = function(nums, target) {
+    // no sorting
+    let lessThan = 0 , freq = 0, answer = [];
+    nums.forEach(item => {
+        item < target && ++lessThan
+        item == target && ++freq
+    })
+    for(let i =0 ; i < freq; i++) answer.push(lessThan + i)
+    return answer;
+};
