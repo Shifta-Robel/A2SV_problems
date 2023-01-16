@@ -17,8 +17,9 @@ var targetIndices = function(nums, target) {
     return answer
 };
 
+
+// no sorting
 var targetIndices = function(nums, target) {
-    // no sorting
     let lessThan = 0 , freq = 0, answer = [];
     nums.forEach(item => {
         item < target && ++lessThan
