@@ -3,8 +3,7 @@
 function maxOperations(nums: number[], k: number): number {
     quickSort(nums)
     let left = 0, right = nums.length - 1, count = 0
-    while(true){
-        if(left >= right) break;
+    while(left < right){
         let sum = nums[left] + nums[right];
         if(sum > k) right--
         else if(sum == k) left++,right--,count++
